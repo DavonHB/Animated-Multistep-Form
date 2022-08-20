@@ -10,7 +10,7 @@
 </head>
 <body>
     <form data-multi-step>
-        <div class="card active" data-step="1">
+        <div class="card" data-step>
             <h3 class="step-title">This is Step 1</h3>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -20,10 +20,10 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password">
             </div>
-            <button type="button">Next</button>
+            <button type="button" data-next>Next</button>
         </div>
 
-        <div class="card" data-step="2">
+        <div class="card" data-step>
             <h3 class="step-title">This is Step 2</h3>
             <div class="form-group">
                 <label for="address">Address</label>
@@ -37,11 +37,11 @@
                 <label for="zipcode">Zip Code</label>
                 <input type="text" id="zip" name="zip">
             </div>
-            <button type="button">Previous</button>
-            <button type="button">Next</button>
+            <button type="button" data-previous>Previous</button>
+            <button type="button" data-next>Next</button>
         </div>
 
-        <div class="card" data-step="3">
+        <div class="card" data-step>
             <h3 class="step-title">This is Step 3</h3>
             <div class="form-group">
                 <label for="firstname">First Name</label>
@@ -51,7 +51,7 @@
                 <label for="lastname">Last Name</label>
                 <input type="text" id="lastname" name="lastname">
             </div>
-            <button type="button">Previous</button>
+            <button type="button" data-previous>Previous</button>
             <button type="submit">Submit</button>
         </div>
     </form>
