@@ -5,8 +5,8 @@
     padding: .5rem;
     max-width: 300px;
     margin: 0 auto;
-    display: none;
-}
+    animation: fade 300ms ease-in-out forwards;
+};
 
 .form-group {
    display: flex;
@@ -37,8 +37,46 @@
     margin: 0;
     margin-bottom: 1rem;
     text-align: center;
+    transition-delay: 300ms;
 }
 
 .card.active {
-    display: block;
+    animation: slide 300ms 150ms ease-in-out both;
+}
+
+.multi-step-form {
+    overflow: hidden;
+    position: relative; 
+}
+
+.hide {
+    display: none
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(.75);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
 }

@@ -37,6 +37,16 @@ multiStepForm.addEventListener("click", event => {
 
 })
 
+
+//takes form steps and adds a transition end animation 
+formSteps.forEach(step => {
+    step.addEventListener("animationend", event => {
+        // remove hide class only when the animation starts
+        formSteps[currentStep].classList.remove("hide")
+        event.target.classList.toggle("hide", !event.target.classList.contains("active"))
+    })
+})
+
 // applies active class to the currentStep which is found based on the index of the array each step is in 
 function showCurrentStep() {
     formSteps.forEach((step, index) => {
